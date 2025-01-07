@@ -26,11 +26,11 @@ namespace MethodOverloading
                 }
             else if (haveMoney == true && (a + b) == 1)
                 { 
-                    return $"{a}+{b} dollar";
+                    return $"{a+b} dollar";
                 }
             else if (haveMoney == true && (a + b) < 1)
                 {
-                    return $"{a} + {b} dollars";
+                    return $"{a} + {b} cents";
                 }
             else 
                 {
@@ -41,15 +41,19 @@ namespace MethodOverloading
         static void Main(string[] args)
         {
            var a = 23;
-           var b = 0;
+           var b = 4;
            var c = 23.93453;
-           var d = 12.45435345;
+           var d = 12.45445;
 
 
 
            var answer = Add(a, b);
 
+           Console.WriteLine(answer);
+
            var decimalAnswer = Add(c, d);
+
+           Console.WriteLine(decimalAnswer);
 
            var boolAnswer = Add(a, b, true);
 
